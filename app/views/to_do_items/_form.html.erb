@@ -1,0 +1,17 @@
+<%= form_for ToDoItem.new(:destination_id => destination_id) , :remote => true do |f| %>
+
+  <%= f.hidden_field :destination_id %>
+  <p>Name</p>
+  <div class="field">
+  	  <%= f.text_field :name %>
+  </div>
+  <p>Location</p>
+  <div class="field">
+  	  <%= f.text_field :location %>
+  </div>
+
+  <div class="field">
+  	 <%= f.submit %>
+  </div>
+
+  <% end %>

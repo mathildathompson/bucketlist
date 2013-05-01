@@ -24,7 +24,10 @@ Bucketlist::Application.routes.draw do
   #       get 'sold'
   #     end
   #   end
+  resources :comments
+  resources :to_do_items
 
+  root :to => 'to_do_items#index'
   # Sample resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales
