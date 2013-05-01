@@ -2,6 +2,7 @@ class ToDoItemsController < ApplicationController
 	def index 
 		@to_do_items = ToDoItem.all
 		@destinations = Destination.all
+		@comments = Comment.all
 	end
 
 	def new

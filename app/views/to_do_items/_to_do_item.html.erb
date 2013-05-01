@@ -6,13 +6,16 @@
 	<div class="comments-<%=to_do_item.id%>">
 		 <% to_do_item.comments.each do |comment| %>
 		    <%= render comment %>
-		   <% end %>
+
+		<% end %>
+		  
     </div>
 
     <%= render :partial => 'comments/form', :locals => { :item => to_do_item } %>
 
-	
- </div>
+	</div>
+
+  
 
 
 

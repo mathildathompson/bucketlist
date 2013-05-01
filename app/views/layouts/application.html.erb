@@ -6,21 +6,23 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 
+<div class="googlemaps">
 
+  <script type = "text/javascript" src= "https://maps.googleapis.com/maps/api/js?key=AIzaSyC74gnSe7p17ulcZUzgPJHxYurGg2bjRYg&sensor=false">
+  </script>
 
-  <script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiW_JZKFQmwY55YfkE3jkMi59_AtdowD8&sensor=false">
-    </script>
-    <script type="text/javascript">
+  
+  <script type="text/javascript">
 
-     $(function() {
-     	initMap();
+      $(function() {
+      initMap();
 
-     	<% ToDoItem.all.each do |item| %>
-     	addMarker(<%=item.latitude%>, <%item.longitude%>, '<%=item.name%>');
-     	<%end%>
+      <% ToDoItem.all.each do |item| %>
+      addMarker(<%=item.latitude%>, <%=item.longitude%>, '<%=item.name%>');
+      <%end%>
      });
      </script>
+</div>
      
 </head>
 <body>
@@ -29,3 +31,19 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   

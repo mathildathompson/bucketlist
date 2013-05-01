@@ -1,17 +1,20 @@
 <% @destinations.each do |d| %>
 
 <div class="destinations">
-	<h2><%= d.name %></h2>
+	<h1><%= d.name %></h1>
 </div>
 
+<div class = "todoitem">
+
 <% d.to_do_items.each do |to_do_item| %>
-    <h2><%= render to_do_item %></h2>
+    <h4><%= render to_do_item %></h4>
+</div>
 	
 
-    <div class = "addtodoitem">
+    <% end %>
+
+     <div class = "addtodoitem">
     <%= render :partial => 'to_do_items/form', :locals => {:destination_id => d.id} %>
     </div>
-
-    <% end %>
 
 <% end %>
