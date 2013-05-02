@@ -1,20 +1,26 @@
-<% @destinations.each do |d| %>
+<div class="encapsulated">
 
 <div class="destinations">
-	<h1><%= d.name %></h1>
+	<h1><%= destination.name %></h1>
+</div>
+
+<div class="destination">
+
+<div id="searchbox">
+   <input type="text" id="search" placeholder="Enter a search term">
 </div>
 
 <div class = "todoitem">
 
-<% d.to_do_items.each do |to_do_item| %>
+<% destination.to_do_items.each do |to_do_item| %>
     <h4><%= render to_do_item %></h4>
 </div>
-	
 
     <% end %>
 
-     <div class = "addtodoitem">
-    <%= render :partial => 'to_do_items/form', :locals => {:destination_id => d.id} %>
+     <div class = "addtodoitem encapsulated" >
+    <%= render :partial => 'to_do_items/form', :locals => {:destination_id => destination.id} %>
     </div>
+ </div>
 
-<% end %>
+</div>

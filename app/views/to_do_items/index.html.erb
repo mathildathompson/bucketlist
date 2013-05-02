@@ -1,11 +1,18 @@
 
-
-<div id="map-canvas">
+<div class="title">
+	<h1>My Bucket List </h1>
 </div>
 
-<div id = "main">
-    <% @destinations %>
-	<%= render :partial => 'destinations/destination'%>
+
+
+<div id="map-canvas">
+	
+</div>
+
+<div class= "main" id="style">
+    <% @destinations.each do |d| %>
+	<%= render :partial => 'destinations/destination', :locals => {:destination => d} %>
+	<%end %>
 
 </div>
 
