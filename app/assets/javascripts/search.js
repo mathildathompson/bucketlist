@@ -1,16 +1,32 @@
 $(document).ready(function(){
 
 	$('#search').change(function(){
+		
 		var searchTerm = $(this).val();
-		console.log(searchTerm);
-	
-	});
+
+		var results = _.filter(items, function(item) {
+			var matchTerm = new RegExp(searchTerm);
+			return item.name.match(matchTerm);
+
+		});
+		console.log(results);
+
+		$('.todoitem').html('')
+
+		_.each(results, function(item){
+		var html = "<p>" + item.name + "</p>";
+		$('.todoitem').append(html);
+	  })
+
+	  
+	 });
 
 });
 
+ 
 
-
-
+ 
+//do not need quotations marks for a variable
 
 //the change() means that the function is only run when the value is changed
 

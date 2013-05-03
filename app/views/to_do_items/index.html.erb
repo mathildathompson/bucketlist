@@ -3,7 +3,9 @@
 	<h1>My Bucket List </h1>
 </div>
 
-
+<div id="searchbox">
+   <input type="text" id="search" placeholder="Enter a search term">
+</div>
 
 <div id="map-canvas">
 	
@@ -12,7 +14,7 @@
 <div class= "main" id="style">
     <% @destinations.each do |d| %>
 	<%= render :partial => 'destinations/destination', :locals => {:destination => d} %>
-	<%end %>
+	<% end %>
 
 </div>
 
