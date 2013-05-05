@@ -25,7 +25,12 @@ Bucketlist::Application.routes.draw do
   #     end
   #   end
   resources :comments
-  resources :to_do_items
+  resources :to_do_items do
+  member do
+       post :like
+   end
+  end
+
 
   root :to => 'to_do_items#index'
   # Sample resource route with sub-resources:

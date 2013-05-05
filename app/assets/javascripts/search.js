@@ -11,7 +11,7 @@ $(document).ready(function(){
 		});
 		console.log(results);
 
-		$('.todoitem').html('')
+		$('.to_do_item').html('')
 
 		_.each(results, function(item){
 		var html = "<p>" + item.name + "</p>";

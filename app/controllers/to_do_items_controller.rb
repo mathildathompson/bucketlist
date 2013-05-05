@@ -1,3 +1,5 @@
+
+
 class ToDoItemsController < ApplicationController
 	def index 
 		@to_do_items = ToDoItem.all
@@ -28,6 +30,16 @@ class ToDoItemsController < ApplicationController
  #        format.json { render json: @to_do_item.errors, status: :unprocessable_entity }
  #      end
  #    end
+   end
+
+   def like
+   	@to_do_item = ToDoItem.find(params[:id])
+   	@user = User.find(1)
+   	@like = Like.create(:to_do_item_id => @to_do_item.id, :user_id => @user.id)
+    @like.save!
+
+    render :partial => 'to_do_items/like'
+
    end
 end
 
