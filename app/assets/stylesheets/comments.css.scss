@@ -11,6 +11,32 @@
 	 color:pink;
 }
 
+.extend-form{
+	font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+}
+
+.extendible-form{
+	display:none;
+}
+
+.field{
+	text-align:center;
+}
+
+.to_do_form{
+	background:lightpink;
+	-webkit-border-radius: 10px;
+	font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+	text-align:center;
+}
+
+.todoform{
+	-webkit-border-radius: 10px;
+	font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+	text-align:center;
+	display:none;
+
+}
 // .new_comment{
 // 	height: 30px;
 //     width: 30px;

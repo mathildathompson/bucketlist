@@ -7,10 +7,10 @@
 
 //                 }
 
-// .todofield {
-// 	       margin-left: 500px;
-//            margin-top: 10px;
-//            }
+.likeimage {
+          text-align:center;
+          font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+}
 
 .createtodo{
   color: black;
@@ -29,6 +29,7 @@ width: 200px;
 .title{
        margin-left: 250px;
        color: lightblue;
+       font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
        }
 
 
@@ -52,4 +53,6 @@ a {
 .name{
 	Text-align: center;
     text-decoration: underline;
+    // -webkit-border-radius: 10px;
+  font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
 }
