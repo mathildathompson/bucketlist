@@ -1,11 +1,36 @@
+// $(document).ready(function(){
+
+//   $('body').bind('ajax:success', function(e, data) {
+//   	 var newtodoitem = $('<div>').append(data).children().data("item-id");
+//      $('.todoitem' + newtodoitem).append(data);
+//       });
+
+//   _.each($('h3#createtodo'), function(x){
+//   	.click(function() {
+//   // $(this).next().find('#todoforms').slideToggle();
+//   $('#todoform').slideToggle('slow', function() {
+//     // Animation complete.
+//   });
+//  });
+// });
+
+// $('h3createtodo').each(function(){
+
+//   $(this).click(function(){
+    
+//   })
+// })
+
+// });
+
+
 $(document).ready(function(){
+	$('.extend-form').click(function() {
+  // $(this).next().find('#todoforms').slideToggle();
+    $(this).parent().find('.extendible-form').slideToggle();
+  });
 
-  $('body').bind('ajax:success', function(e, data) {
-     $('.to_do_items').append(data);
-      });
-
+	$('.to_do_form').click(function(){
+		$(this).next().slideToggle();
+	})
 });
-
-
-
- 

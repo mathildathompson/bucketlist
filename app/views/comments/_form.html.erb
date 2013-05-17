@@ -1,15 +1,20 @@
-<div id="style">
-	<%= form_for Comment.new(:to_do_item_id => item.id), :remote => true do |f| %>
-
-  <%= f.hidden_field :to_do_item_id %>
-
-  <div class="field">
-  	  <%= f.text_area :body %>
+  <div class="extend-form">
+     <h4>Click to create a comment</h4>
   </div>
 
-  <div class="field">
-  	 <%= f.submit %>
-  </div>
+ <div class="extendible-form">
+ 
+    	<%= form_for Comment.new(:to_do_item_id => item.id), :remote => true do |f| %>
 
-  <% end %>
-  </div>
+      <%= f.hidden_field :to_do_item_id %>
+
+      <div class="field" id='clearsearch' value=''>
+      	  <%= f.text_area :body %>
+      </div>
+
+      <div class="field">
+      	 <%= f.submit %>
+      </div>
+
+     <% end %>
+ </div>

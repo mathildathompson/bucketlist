@@ -1,0 +1,6 @@
+
+var div = document.createElement('div');
+var tditem = ("<%= escape_javascript(@to_do_item.name) %>");
+div.innerHTML = tditem;
+$('.todoitemsearch').append(tditem);
+

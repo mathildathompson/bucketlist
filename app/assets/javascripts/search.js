@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+
+
 	$('#search').change(function(){
 		
 		var searchTerm = $(this).val();
@@ -11,11 +13,12 @@ $(document).ready(function(){
 		});
 		console.log(results);
 
-		$('.to_do_item').html('')
+		   $('.to_do_item').html('');
+		   $('.to_do_form').html('');
 
 		_.each(results, function(item){
 		var html = "<p>" + item.name + "</p>";
-		$('.todoitem').append(html);
+		$('#todoitemsearch').append(html);
 	  })
 
 	  

@@ -16,10 +16,15 @@ class ToDoItemsController < ApplicationController
 	end
 
 	def create
-		@to_do_item = ToDoItem.new(params[:to_do_item])
-		@to_do_item.save!
+		
+		@to_do_item = ToDoItem.create(params[:to_do_item])
+        @to_do_item.save!
+		# render :template => 'to_do_items/newtodoitem'
+		render :partial => 'to_do_items/create_to_do'
+		# render :template => 'to_do_items/newtodoitem'
 
-		render @to_do_item 
+	end
+
 
 	# respond_to do |format|
  #      if @to_do_item.save
@@ -30,18 +35,22 @@ class ToDoItemsController < ApplicationController
  #        format.json { render json: @to_do_item.errors, status: :unprocessable_entity }
  #      end
  #    end
-   end
+   # end
 
    def like
    	@to_do_item = ToDoItem.find(params[:id])
    	@user = User.find(1)
+	@item_id = params[:id]
    	@like = Like.create(:to_do_item_id => @to_do_item.id, :user_id => @user.id)
-    @like.save!
+   	@like.save!
 
-    render :partial => 'to_do_items/like'
+    # respond_to do |format|
+    #     format.json { render :text=>params }
+    # end
 
    end
 end
+
 
 
 

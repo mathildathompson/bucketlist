@@ -12,9 +12,24 @@
 //            margin-top: 10px;
 //            }
 
+.createtodo{
+  color: black;
+background: lightpink;
+width: 200px;
+}
+
+#comment_form{
+            display:none;
+            }
+
 .to_do_item {
 	      background-color: lightblue;
             }
+
+.title{
+       margin-left: 250px;
+       color: lightblue;
+       }
 
 
 // 	html{

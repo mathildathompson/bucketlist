@@ -1,3 +1,4 @@
+
 class CommentsController < ApplicationController
 
 	def index 
@@ -10,7 +11,7 @@ class CommentsController < ApplicationController
 
 	def create
 		@comment = Comment.new(params[:comment])
-		@comment.save!
+		# @comment.save!
 		render @comment
     end
     
