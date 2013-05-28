@@ -18,7 +18,7 @@ $(document).ready(function(){
 
 		_.each(results, function(item){
 		var html = "<p>" + item.name + "</p>";
-		$('#todoitemsearch').append(html);
+		$('.searchbox').append(html);
 	  })
 
 	  

@@ -25,6 +25,10 @@
 
 
 $(document).ready(function(){
+    $('.destinations').click(function(){
+    	$(this).next().slideToggle();
+    })
+
 	$('.extend-form').click(function() {
   // $(this).next().find('#todoforms').slideToggle();
     $(this).parent().find('.extendible-form').slideToggle();

@@ -6,6 +6,13 @@
 //                 margin-top: 50px;
 
 //                 }
+.searchbox{
+           text-align:center;
+}
+
+#search{
+        -webkit-border-radius: 10px;
+}
 
 .likeimage {
           text-align:center;
@@ -24,6 +31,7 @@ width: 200px;
 
 .to_do_item {
 	      background-color: lightblue;
+        -webkit-border-radius: 10px;
             }
 
 .title{
@@ -52,7 +60,7 @@ a {
 
 .name{
 	Text-align: center;
-    text-decoration: underline;
+    
     // -webkit-border-radius: 10px;
   font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
 }
