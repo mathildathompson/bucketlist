@@ -25,6 +25,7 @@ Bucketlist::Application.routes.draw do
   #     end
   #   end
   resources :comments
+  resources :destinations
   resources :to_do_items do
   member do
        post :like

@@ -8,8 +8,8 @@
 
 <div class= "main" id="style">
 	  <% @destinations.each do |destination| %>
-	    <div class="destinations <%=destination.id%>">
-		  <h2><%= destination.name %></h2>
+	    <div class="destinations" id='<%=destination.id%>' data-destination-id="<%=destination.id%>">
+		  <h2><%= link_to destination.name, destinations_path(destination.id), :remote => true, :method => :post %></h2>
 		</div>
 	  <%end%>
     </div>
