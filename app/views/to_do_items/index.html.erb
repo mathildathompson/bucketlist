@@ -1,45 +1,35 @@
 
+<div id="map-canvas">
+</div>
+
 <div class="title">
 	<h1>My Bucket List </h1>
 </div>
 
-<div id="map-canvas">
-	
-</div>
+<div class= "main" id="style">
+	  <% @destinations.each do |destination| %>
+	    <div class="destinations <%=destination.id%>">
+		  <h2><%= destination.name %></h2>
+		</div>
+	  <%end%>
+    </div>
 
-<div id="wholedoc">
-	<div class= "main" id="style">
-	    <% @destinations.each do |destination| %>
-		<div class="encapsulated">
-
-			<div class="destinations">
-				<h1><%= destination.name %></h1>
-
-				<div class="searchbox">
-				   <input type="text" id="search" placeholder="Search a To Do Item">
-				</div>
-
-			</div>
-
-			<div class="destination">
-			   <div class="todoitemsearch"> 
-					<div class = "todoitem<%=destination.id%>">
-
-					<% destination.to_do_items.each do |to_do_item| %>
-					    <h4><%= render to_do_item, :item_id=>to_do_item.id %></h4>
-					<% end %>
-				    </div>
-			   </div>
-
-			     <div class = "addtodoitem">
-			    <%= render :partial => 'to_do_items/form', :locals => {:destination_id => destination.id} %>
-			    </div>
-			 </div>
-
-			</div>
-		<% end %>
-
+	<div class="todoitemsearch"> 
+	  <%@destinations.each do |destination|%>
+	    <div class = "todoitem<%=destination.id%>">
+		  <% destination.to_do_items.each do |to_do_item| %>
+			<h4><%= render to_do_item, :item_id=>to_do_item.id %></h4>
+		  <%end%>
+		</div>
 	</div>
+
+	<div class = "addtodoitem">
+		<%= render :partial => 'to_do_items/form', :locals => {:destination_id => destination.id} %>
+	</div>
+  <%end%>
+</div> 
+
+
 
 
 

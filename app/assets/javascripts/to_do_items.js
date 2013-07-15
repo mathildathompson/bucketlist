@@ -25,12 +25,13 @@
 
 
 $(document).ready(function(){
-	$('.extend-form').click(function() {
+
+  $('.extend-form').click(function() {
   // $(this).next().find('#todoforms').slideToggle();
     $(this).parent().find('.extendible-form').slideToggle();
   });
 
-	$('.to_do_form').click(function(){
+  $('.to_do_form').click(function(){
 		$(this).next().slideToggle();
 	})
 });
