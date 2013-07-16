@@ -13,7 +13,7 @@ class DestinationsController < ApplicationController
 		@tdiarray = []
 		@to_do_items.each do |x|
 		  name = x.name
-		@tdiarray << name
+		  @tdiarray << name
 
         @comments = []
 		@to_do_items.each do |tdi|
