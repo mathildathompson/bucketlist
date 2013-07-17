@@ -1,10 +1,10 @@
-<%binding.pry%>
+// ('#appenditems').html("");
 <% @destination[0].to_do_items.each do |to_do_item| %>
-  <%binding.pry%>
-  <%=to_do_item.id%>
+  <%#binding.pry%>
+  <%#=to_do_item.id%>
   $('#appenditems').append('<%= j(render to_do_item, :locals => {:to_do_item=>@to_do_item}) %>');
 <%end%>
-<%binding.pry%>
+<%#binding.pry%>
 
 <%#div class = "addtodoitem"%>
   $('#appenditems2').append('<%= j(render :partial => 'to_do_items/form', :locals => {:destination_id => @destination[0].id}) %>');
