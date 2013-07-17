@@ -6,7 +6,7 @@ class DestinationsController < ApplicationController
 	end
 
 	def create
-		binding.pry
+		# binding.pry
 		@destination_id = params['searchid']
 		# binding.pry
 		@destination = Destination.where(id:@destination_id)
