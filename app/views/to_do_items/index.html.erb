@@ -13,10 +13,11 @@
 
 <!-- <div class='appenditems2'>
 </div> -->
-<div class= "main" id="mathilda">
+<div class= "main" id="style">
   <% @destinations.each do |x| %>
     <div class="destinations" id='<%=x.id%>' data-destination-id="<%=x.id%>">
-      <h2><%= link_to x.name, destinations_path(x.id), :id => x.id, :remote => true, :method => :post %></h2>
+      <!-- <h2><%#= link_to x.name, destinations_path(x.id), :id => x.id, :remote => true, :method => :post %></h2> -->
+      <h2><%=x.name%></h2>
 	</div>
 	<%end%>
 </div>

@@ -1,6 +1,5 @@
 $(document).ready(function(){
-  $('.to_do_item').hide();
-  $('.addtodoitem').hide();
+
   //   $('.destinations').onclick(function{
   // //   $('.to_do_item').hide();
   // //   $('.addtodoitem').hide();
