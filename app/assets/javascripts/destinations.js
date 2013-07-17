@@ -2,16 +2,19 @@
 // All this logic will automatically be available in application.js.
 $(document).ready(function(){
   console.log('hello');
+  console.log('Mathilda');
  
   // $('div').append
   $('.destinations').click(function(){
   	// console.log(<%=destination.id%>);
-  	console.log(this);
-  	console.log(this.id);
+  	// console.log(this);
+    $('.destinations').hide();
+    $('#mathilda').show();
+  	// console.log(this.id);
 
   	// console.log(event);
 
-  	var destination_id = $('.destinations').data('destination-id');
-  	console.log(destination_id);
+  	// var destination_id = $('.destinations').data('destination-id');
+  	// console.log(destination_id);
   })
 });

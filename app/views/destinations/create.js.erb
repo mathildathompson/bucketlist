@@ -1,16 +1,36 @@
+<%binding.pry%>
+<% @destination[0].to_do_items.each do |to_do_item| %>
+  <%binding.pry%>
+  <%=to_do_item.id%>
+  $('#appenditems').append('<%= j(render to_do_item, :locals => {:to_do_item=>@to_do_item}) %>');
+<%end%>
+<%binding.pry%>
+
+<%#div class = "addtodoitem"%>
+  $('#appenditems2').append('<%= j(render :partial => 'to_do_items/form', :locals => {:destination_id => @destination[0].id}) %>');
+// </div>
+<%#end%>
+
+
 // $('.destinations').click(function(){
 //   $('.destinations').hide();
-//   var destination = $('<div>').addClass('jsdestination').html('<%=@destination[0].name%>');
-//   // destination.setAttribute('class', 'jsdestination');
-//   $('.appenditems').append(destination);
-//   // destination.setAttribute('class', 'jsdestination');
-//   // var to_do_item = '<%=@tdiarray%>'
-//   // var to_do_item = to_do_items.to_a
-//   <%#binding.pry%>
+//   // $('#style').show();
+// //   var destination = $('<div>').addClass('jsdestination').html('<%#=@destination[0].name%>');
+// //   // destination.setAttribute('class', 'jsdestination');
+// //   $('.appenditems').append(destination);
+// //   // destination.setAttribute('class', 'jsdestination');
+// //   // var to_do_item = '<%#=@tdiarray%>'
+// //   // var to_do_item = to_do_items.to_a
+// //   <%#binding.pry%>
 
-//   $.each(<%=raw @tdiarray.to_json%>, function(index, value){
-//   	specto_do_item = $('<div>').addClass('jsto_do_item').html(value);
-//   	$('.appenditems').append(specto_do_item);
-//       // alert(index + ': ' + value);
-//   });
+// //   $.each(<%#=raw @tdiarray.to_json%>, function(index, value){
+// //   	specto_do_item = $('<div>').addClass('jsto_do_item').html(value);
+// //   	$('.appenditems').append(specto_do_item);
+// //       // alert(index + ': ' + value);
+// //   });
 // });
+// <div class="todoitemsearch"> 
+// <%#@destinations.each do |destination|%>
+// <div class = "todoitem<%#=destination[0].id%>">
+
+

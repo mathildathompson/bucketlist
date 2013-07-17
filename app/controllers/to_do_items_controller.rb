@@ -2,9 +2,12 @@
 
 class ToDoItemsController < ApplicationController
 	def index 
-		@to_do_items = ToDoItem.all
+	    # @destination_id = params['format']
+	    # binding.pry
+		# @destination = Destination.where(id:@destination_id)
+		# @to_do_items = ToDoItem.all
 		@destinations = Destination.all
-		@comments = Comment.all
+		# @comments = Comment.all
 	end
 
 	def new
@@ -22,8 +25,7 @@ class ToDoItemsController < ApplicationController
 		# render :template => 'to_do_items/newtodoitem'
 		render :partial => 'to_do_items/create_to_do'
 		# render :template => 'to_do_items/newtodoitem'
-
-	end
+    end
 
 
 	# respond_to do |format|

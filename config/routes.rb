@@ -30,6 +30,7 @@ Bucketlist::Application.routes.draw do
   member do
        post :like
        post :comment
+       # post :index
    end
   end
 

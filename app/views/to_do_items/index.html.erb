@@ -3,35 +3,40 @@
 </div>
 
 <div class="title">
-	<h1>My Bucket List </h1>
+  <h1>My Bucket List </h1>
 </div>
 
-<div class='appenditems'>
+<div id='appenditems'>
 </div><br>
-<div class='appenditems2'>
+<div id='appenditems2'>
 </div>
-<div class= "main" id="style">
-	  <% @destinations.each do |destination| %>
-	    <div class="destinations" id='<%=destination.id%>' data-destination-id="<%=destination.id%>">
-		  <h2><%= link_to destination.name, destinations_path(destination.id), :remote => true, :method => :post %></h2>
-		</div>
-	  <%end%>
-    </div>
 
+<!-- <div class='appenditems2'>
+</div> -->
+<div class= "main" id="mathilda">
+  <% @destinations.each do |x| %>
+    <div class="destinations" id='<%=x.id%>' data-destination-id="<%=x.id%>">
+      <h2><%= link_to x.name, destinations_path(x.id), :id => x.id, :remote => true, :method => :post %></h2>
+	</div>
+	<%end%>
+</div>
+
+<!-- <div id='toappend'>
 	<div class="todoitemsearch"> 
-	  <%@destinations.each do |destination|%>
-	    <div class = "todoitem<%=destination.id%>">
-		  <% destination.to_do_items.each do |to_do_item| %>
-			<h4><%= render to_do_item, :item_id=>to_do_item.id %></h4>
-		  <%end%>
+		<%#binding.pry%>
+	  <%#@destinations.each do |destination|%>
+	    <div class = "todoitem<%#=destination[0].id%>">
+		  <%# destination[0].to_do_items.each do |to_do_item| %>
+		    <h4><%#= render to_do_item, :item_id=>to_do_item.id %></h4>
+		  <%#end%>
 		</div>
 	</div>
 
 	<div class = "addtodoitem">
-		<%= render :partial => 'to_do_items/form', :locals => {:destination_id => destination.id} %>
+	  <%#= render :partial => 'to_do_items/form', :locals => {:destination_id => destination[0].id} %>
 	</div>
-  <%end%>
-</div> 
+	<%#end%>
+</div> --> 
 
 
 

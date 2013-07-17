@@ -1,11 +1,12 @@
-<div class="to_do_item <%= to_do_item.completed? ? 'completed' : '' %>">
-
+<%binding.pry%>
+<div class="to_do_item <%#= to_do_item.completed? ? 'completed' : '' %>">
+<!-- 
 <div class="likeimage">
-    <%=link_to image_tag('like.jpg', :width => 20),like_to_do_item_path(to_do_item.id), :remote => true, :method => :post %>
-    <div id="update<%=item_id%>" style="display:inline-block;">
-    <%= "#{pluralize(to_do_item.likes.count,'like')}" %>
+    <%#=link_to image_tag('like.jpg', :width => 20),like_to_do_item_path(to_do_item.id), :remote => true, :method => :post %>
+    <div id="update<%#=item_id%>" style="display:inline-block;">
+    <%#= "#{pluralize(to_do_item.likes.count,'like')}" %>
     </div>
-</div>
+</div> -->
 
 <div class="name" data-item-id="<%=to_do_item.destination.id%>">
    <h3><%= to_do_item.name%></h3>
