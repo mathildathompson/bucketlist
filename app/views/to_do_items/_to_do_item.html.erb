@@ -8,21 +8,18 @@
     </div>
 </div> -->
 
-<div class="name" data-item-id="<%=to_do_item.destination.id%>">
-   <h3><%= to_do_item.name%></h3>
+  <div class="name" data-item-id="<%=to_do_item.destination.id%>">
+    <h3><%= to_do_item.name%></h3>
+  </div>
+
+ <div id="style" class="comments<%=to_do_item.id%>">
+  <% to_do_item.comments.each do |comment| %>
+	<%= render comment %>
+  <%end%>
 </div>
 
-  <div id="style" class="comments<%=to_do_item.id%>">
-		 <% to_do_item.comments.each do |comment| %>
-		    <%= render comment %>
-
-		<% end %>
-		  
-    </div>
-
-    <%= render :partial => 'comments/form', :locals => { :item => to_do_item } %>
-
-	</div>
+  <%= render :partial => 'comments/form', :locals => {:item => to_do_item} %>
+</div>
 
  
 
