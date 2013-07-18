@@ -10,7 +10,7 @@ class CommentsController < ApplicationController
 	end
 
 	def create
-		binding.pry
+		# binding.pry
 		@comment = Comment.new(params[:comment])
 		@comment.save!
 		render @comment

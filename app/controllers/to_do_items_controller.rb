@@ -1,5 +1,4 @@
 
-
 class ToDoItemsController < ApplicationController
 	def index 
 	    # @destination_id = params['format']
@@ -19,7 +18,7 @@ class ToDoItemsController < ApplicationController
 	end
 
 	def create
-		
+		# binding.pry
 		@to_do_item = ToDoItem.create(params[:to_do_item])
         @to_do_item.save!
 		# render :template => 'to_do_items/newtodoitem'

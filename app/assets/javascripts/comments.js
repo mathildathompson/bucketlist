@@ -17,6 +17,8 @@ $(document).ready(function(){
 	var new_comment = $('<div>').append(cool_beans).children().data("item-id");
 	// alert('.comments' + new_comment);
 	$('.comments' + new_comment).append(cool_beans);
+	// $('#clearsearch').input('');
+	$('#comment_body').html('');
  });
 
 
