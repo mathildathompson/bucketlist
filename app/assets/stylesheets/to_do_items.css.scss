@@ -1,22 +1,25 @@
-.createtodo{
-color:black;
-background:lightpink;
-width: 200px;
-}
-
 #comment_form{
 display:none;
+}
+
+#comment_body{
+height: 40px;
+-webkit-border-radius: 5px;
+width:225px;
 }
 
 .to_do_item{
 background-color:lightblue;
 margin-left:2%;
-width: 40%;
+width: 20%;
 border-radius: 10px;
 opacity:.7;
 transition:all 0.2s ease-in-out;
 border: 1px solid grey;
 box-shadow: 2px 2px 7px #888;
+margin-left:400px;
+margin-bottom:20px;
+// float:left;
 }
 
 .to_do_item:hover{
@@ -40,6 +43,7 @@ width: 400px;
 height: 400px;
 margin-top:6%;
 margin-right:50px;
+margin-top:-20px;
 }
 
 a{
@@ -62,4 +66,39 @@ padding-top:1%;
 
 .field{
   margin-left:1%;
+  margin-bottom:2%;
+}
+
+.new_to_do_item{
+width:200px;
+margin-left: 2%;
+}
+
+.to_do_form h3{
+width:200px;
+padding-top: 15px;
+margin-left: 5px;
+// border:1px solid lightgrey;
+}
+
+#appenditems2{
+width:200px;
+// border:1px solid black;
+margin-left: 400px;
+background-color: lightblue;
+border-radius: 10px;
+width: 255px;
+box-shadow: 2px 2px 7px #888;
+margin-top:-30px;
+opacity:0.7;
+}
+
+#appenditems{
+// border:1px solid lightgrey;
+// width: 1200px;
+}
+
+.main{
+float:left;
+// border:1px solid black;
 }

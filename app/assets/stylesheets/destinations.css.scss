@@ -1,5 +1,5 @@
 .destinations{
-	width:50%;
+	width:300px;
 	margin-left:3%;
 	border:1px solid black;
 	background-color:lightgrey;
@@ -9,14 +9,4 @@
 
 .destinations:hover{
 	opacity:0.9;
-}
-
-#map-canvas{
-	margin-top:-20px;
-}
-
-
-body h2{
-	color:darkpink;
-	margin-left:5%;
 }
