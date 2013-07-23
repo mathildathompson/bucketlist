@@ -1,25 +1,55 @@
-
+var markers=[];
 
 var map; 
 
-         function initMap() {
-         var mapOptions = {
-         center: new google.maps.LatLng(48.8530, 2.3498),
-         zoom:12,
-         mapTypeId: google.maps.MapTypeId.ROADMAP
-         };
+  function initMap() {
+    var mapOptions = {
+      center: new google.maps.LatLng(48.8530, 2.3498),
+      zoom:12,
+      mapTypeControlOptions: {
+      mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+      }
+    };
 
-       map = new google.maps.Map($("#map-canvas")[0], mapOptions);
-       }
+    var styles = [
+  {
+    featureType: "road",
+    elementType: "geometry",
+    stylers: [
+    { lightness: 100 },
+    { visibility: "simplified" }
+    ]
+  },{
+    featureType: "road",
+    elementType: "labels",
+    stylers: [
+    { visibility: "off" }
+    ]
+  }
+  ];
 
-      function addMarker(latitude, longitude, title) {
-      	var marker = new google.maps.Marker({
-      		position:new google.maps.LatLng(latitude, longitude), 
+  var styledMap = new google.maps.StyledMapType(styles,
+   {name: "Styled Map"});
+
+  map = new google.maps.Map($("#map-canvas")[0], mapOptions);
+  map.mapTypes.set('map_style', styledMap);
+  map.setMapTypeId('map_style');
+};
+
+  var latlng = [];
+
+  function addMarker(latitude, longitude, title) {
+    var markerLatlng = new google.maps.LatLng(latitude, longitude);
+    var marker = new google.maps.Marker({
+      		position: markerLatlng,
       		map : map, 
       		title : title
       	});
       }
 
-      
+      function deleteOverlays() {
+        clearOverlays();
+        markers = [];
+      }
 
   

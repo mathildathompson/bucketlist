@@ -4,6 +4,10 @@ $('#appenditems2').html("");
   <%#binding.pry%>
   <%#=to_do_item.id%>
   $('#appenditems').append('<%= j(render to_do_item, :locals => {:to_do_item=>@to_do_item}) %>');
+   
+   // initmap();
+   addMarker(<%=to_do_item.latitude%>, <%=to_do_item.longitude%>, '<%=to_do_item.name%>');
+
 <%end%>
 <%#binding.pry%>
 

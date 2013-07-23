@@ -13,18 +13,10 @@
 
   
   <script type="text/javascript">
-
       $(function() {
-      initMap();
-
-      //add here var items that converts ToDoItems to JSON, take out the var to make to global
-      items = <%=raw(ToDoItem.all.to_json) %>
-
-      <% ToDoItem.all.each do |item| %>
-      addMarker(<%=item.latitude%>, <%=item.longitude%>, '<%=item.name%>');
-      <%end%>
-     });
-     </script>
+        initMap();
+      });
+  </script>
 </div>
      
 </head>

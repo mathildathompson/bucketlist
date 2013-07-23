@@ -1,6 +1,7 @@
 var div = $('<div>');
+// console.log(div);
 var tditem = ("<%= j(@to_do_item.name) %>");
-console.log(tditem);
+// console.log(tditem);
 div.innerHTML = tditem;
 console.log(div);
 $('#appenditems').append(div);
