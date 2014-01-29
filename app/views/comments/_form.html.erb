@@ -6,15 +6,15 @@
  
     	<%= form_for Comment.new(:to_do_item_id => item.id), :remote => true do |f| %>
 
-      <%= f.hidden_field :to_do_item_id %>
+        <%= f.hidden_field :to_do_item_id %>
 
-      <div class="field" id='clearsearch' value=''>
-      	  <%= f.text_area :body %>
-      </div>
+        <div class="field" id='clearsearch' value=''>
+        	  <%= f.text_area :body %>
+        </div>
 
-      <div class="field">
-      	 <%= f.submit %>
-      </div>
+        <div class="field">
+        	 <%= f.submit %>
+        </div>
 
      <% end %>
  </div>

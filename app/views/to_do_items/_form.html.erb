@@ -1,31 +1,19 @@
 <div class ="to_do_form">
- 
-    <h3>Create a new to do item</h3>
-</div>
+  <h3>Create a new to do item</h3>
 
-    <div class="todoform">
-
-    <%= form_for ToDoItem.new(:destination_id => destination_id) , :remote => true do |f| %>
+<%= form_for ToDoItem.new(:destination_id => destination_id) , :remote => true do |f| %>
 
   <%= f.hidden_field :destination_id %>
 
-  
-  <div class="field">
     <p>Name</p> <BR>
   	  <%= f.text_field :name %>
-  </div>
 
-  <div class="field">
     <p>Location</p>
   	  <%= f.text_field :location %>
-  </div>
 
-  <div class="field">
   	 <%= f.submit %>
-  </div>
 
   <% end %>
- </div>
 
 </div>
 

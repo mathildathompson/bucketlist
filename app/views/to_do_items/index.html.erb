@@ -10,37 +10,30 @@
 
 	<div class= "main" id="style">
 		<% @destinations.each do |destination| %>
-		<div class="encapsulated">
 
 			<div class="destinations">
 				<h1><%= destination.name %></h1>
 			</div>
 
-        <div class="bodyslidetoggle">
-				<div class="searchbox">
-					<input type="text" id="search" placeholder="Search a To Do Item">
-				</div>
-
+        	<div class="bodyslidetoggle">
+				<input type="text" id="search" placeholder="Search a To Do Item">
+			</div>
 
 			<div class="destination">
-				<div class="todoitemsearch"> 
-					<div class = "todoitem<%=destination.id%>">
-
-						<% destination.to_do_items.each do |to_do_item| %>
-						<h4><%= render to_do_item, :item_id=>to_do_item.id %></h4>
-						<% end %>
-					</div>
+				<div class = "todoitem<%=destination.id%>">
+					<% destination.to_do_items.each do |to_do_item| %>
+					<h4><%= render to_do_item, :item_id => to_do_item.id %></h4>
+					<% end %>
 				</div>
 
 				<div class = "addtodoitem">
-					<%= render :partial => 'to_do_items/form', :locals => {:destination_id => destination.id} %>
+					<%= render :partial => 'to_do_items/form', :locals => {destination_id: destination.id} %>
 				</div>
 			</div>
-
-		</div>
 		<% end %>
-
 	</div>
+
+</div>
 
 
 

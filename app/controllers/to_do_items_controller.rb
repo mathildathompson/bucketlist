@@ -18,37 +18,45 @@ class ToDoItemsController < ApplicationController
 	def create
 		
 		@to_do_item = ToDoItem.create(params[:to_do_item])
-        @to_do_item.save!
-		# render :template => 'to_do_items/newtodoitem'
-		render :partial => 'to_do_items/create_to_do'
-		# render :template => 'to_do_items/newtodoitem'
+
+        respond_to do |format|
+            if @to_do_item.save
+              format.html { redirect_to @to_do_item, notice: 'User was successfully created.' }
+              # binding.pry
+              format.js   {}
+              #This goes to the create.js.erb
+              format.json { render json: @to_do_item, status: :created, location: @to_do_item }
+            else
+              format.html { render action: "new" }
+              format.json { render json: @to_do_item.errors, status: :unprocessable_entity }
+            end
+          end
 
 	end
 
 
-	# respond_to do |format|
- #      if @to_do_item.save
- #        format.html { redirect_to @to_do_item, notice: 'Category was successfully created.' }
- #        format.json { render json: @to_do_item, status: :created, location: @to_do_item }
- #      else
- #        format.html { render action: "new" }
- #        format.json { render json: @to_do_item.errors, status: :unprocessable_entity }
- #      end
- #    end
-   # end
 
    def like
    	@to_do_item = ToDoItem.find(params[:id])
    	@user = User.find(1)
-	@item_id = params[:id]
    	@like = Like.create(:to_do_item_id => @to_do_item.id, :user_id => @user.id)
-   	@like.save!
 
-    # respond_to do |format|
-    #     format.json { render :text=>params }
-    # end
+    respond_to do |format|
+          if @like.save
+            format.html { redirect_to @to_do_item, notice: 'User was successfully created.' }
+            # binding.pry
+            format.js   do 
+              @item_id = params[:id]
+            end
+            #This goes to the create.js.erb
+            format.json { render json: @to_do_item, status: :created, location: @to_do_item }
+          else
+            format.html { render action: "new" }
+            format.json { render json: @to_do_item.errors, status: :unprocessable_entity }
+          end
+        end
+    end
 
-   end
 end
 
 

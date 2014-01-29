@@ -1,0 +1,6 @@
+var div = document.createElement('div');
+var tditem = ("<%= j(@to_do_item.name) %>");
+div.innerHTML = tditem;
+$('.to_do_item').append(tditem);
+
+//I need to append another erb template onto the form as I did in Blogosphere, this is a bit hard right now, going to explore the appl further; 

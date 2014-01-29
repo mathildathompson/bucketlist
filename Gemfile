@@ -27,6 +27,7 @@ end
 
 gem 'jquery-rails'
 gem 'geocoder'
+gem 'pry'
 # gem 'pry'
 
 # To use ActiveModel has_secure_password

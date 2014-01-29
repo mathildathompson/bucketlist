@@ -10,6 +10,14 @@
            text-align:center;
 }
 
+.addtodoitem{
+  width:40%;
+}
+
+.destinations, .bodyslidetoggle{
+  width:40%;
+}
+
 #search{
         -webkit-border-radius: 10px;
 }
@@ -32,6 +40,7 @@ width: 200px;
 .to_do_item {
 	      background-color: lightblue;
         -webkit-border-radius: 10px;
+        width:40%;
             }
 
 .title{
